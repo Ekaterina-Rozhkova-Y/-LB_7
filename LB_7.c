@@ -91,12 +91,14 @@ int z2() {
 
 
 
-int DZ() {
+
+int DZ()
+{
     setlocale(LC_CTYPE, "RUS");
 
     int p;
 
-    printf("Введите степень числа 10 (от -24 до 24): ");
+    printf("Введите степень числа 10 (от -24 до -1): ");
     if (scanf("%d", &p) != 1) {
         printf("Ошибка: неверный формат ввода.\n");
         return 1;
@@ -115,17 +117,6 @@ int DZ() {
     case -3:  printf("милли (м)\n"); break;
     case -2:  printf("санти (с)\n"); break;
     case -1:  printf("деци (д)\n"); break;
-    case 0:   printf("(единица)\n"); break;
-    case 1:   printf("дека (да)\n"); break;
-    case 2:   printf("гекто (г)\n"); break;
-    case 3:   printf("кило (к)\n"); break;
-    case 6:   printf("мега (М)\n"); break;
-    case 9:   printf("гига (Г)\n"); break;
-    case 12:  printf("тера (Т)\n"); break;
-    case 15:  printf("пета (П)\n"); break;
-    case 18:  printf("экса (Э)\n"); break;
-    case 21:  printf("зетта (З)\n"); break;
-    case 24:  printf("йотта (Й)\n"); break;
 
     default:
         printf("для степени 10^%d приставка не предусмотрена\n", p);
